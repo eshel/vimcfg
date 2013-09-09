@@ -3,7 +3,7 @@ set nocompatible	                " vim, not vi
 filetype off				" seems to be required for vundle
 
 " Vundle initialization stuff
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 " let Vundle manage Vundle, required!
@@ -35,5 +35,5 @@ set ignorecase	" case insensitive searching
 set showmatch	" show matching brackets
 set number 	" line numbers
 
-syntax on
+set ruler 	" shows statusline, displays cursor position
 
