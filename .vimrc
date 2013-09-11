@@ -73,8 +73,8 @@ set smartindent
 " shiftwidth = How many spaces will a 'shift' command take.
 autocmd BufWinEnter,FileType *,python,javascript set expandtab smarttab tabstop=4 softtabstop=4 shiftwidth=4  " This includes default behaviour.
 autocmd BufWinEnter,FileType html,css            set expandtab smarttab tabstop=2 softtabstop=2 shiftwidth=2  " FIXME: Doesn't work.
-"
-"
+
+
 " Searching
 "set hlsearch  " Highlight search.
 set smartcase  " Be case sensitive when input has a capital letter.
@@ -141,5 +141,5 @@ set copyindent				" use existing indents for new indents
 set preserveindent			" save as much indent structure as possible
 
 set number 	" line numbers
-set numberwidth=4   " width of numbers column
+set numberwidth=5   " width of numbers column
 
