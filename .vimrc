@@ -33,6 +33,9 @@ Bundle "camelcasemotion"
 Bundle "scrooloose/nerdcommenter"
 Bundle "AutoTag"
 
+" vim-thrift
+au BufRead,BufNewFile *.thrift set filetype=thrift
+au! Syntax thrift source $VIM/syntax/thrift.vim
 
 " Terminal / GUI
 set t_Co=256            " Set terminal to display 256 colors
