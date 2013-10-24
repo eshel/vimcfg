@@ -28,10 +28,17 @@ Bundle "indentpython.vim"
 let python_highlight_all=1          " Enable all plugin's highlighting
 let python_print_as_function=1      " Color 'print' function
 
+Bundle "scrooloose/syntastic"
+
 " Other plugins
 Bundle "camelcasemotion"
 Bundle "scrooloose/nerdcommenter"
 Bundle "AutoTag"
+
+" Git
+Bundle "tpope/vim-fugitive"
+Bundle "airblade/vim-gitgutter"
+
 
 " vim-thrift
 au BufRead,BufNewFile *.thrift set filetype=thrift
@@ -104,11 +111,14 @@ set showcmd  " Display an incomplete command in status line.
 set ruler  " Show file status ruler. NOTE: Doesn't work with buftabs.vim plugin.
 "set ch=2  " Make command line two lines high
 
+
 " Invisible characters.
 if ! has("win32")
-    set listchars=tab:▸\ ,trail:¬,eol:«  " Invisible characters.
+    "set listchars=tab:▸\ ,trail:¬,eol:«  " Invisible characters.
     "set listchars=tab:°\ ,trail:·,eol:☠  " Alternate invisible characters.
+    "set listchars=tab:▷⋅,trail:⋅,nbsp:⋅    
 endif
+
 "set list  " Display invisible characters.
 set nolist  " Don't display invisible characters.
 
@@ -143,6 +153,9 @@ set shiftround				" always round indents to multiple of shiftwidth
 set copyindent				" use existing indents for new indents
 set preserveindent			" save as much indent structure as possible
 
-set number 	" line numbers
+set number          " line numbers
 set numberwidth=5   " width of numbers column
 
+" Syntastic settings
+let g:syntastic_check_on_open = 1
+let g:syntastic_python_checkers = ['pyflakes', 'python']
