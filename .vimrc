@@ -134,7 +134,7 @@ set wildignore+=*.jpg,*.jpeg,*.png,*.gif  " Ignore images
 set wildignore+=*.pdf  " Ignore PDF files
 set wildignore+=*.pyc,*.pyo  " Ignore compiled Python files
 
-set wildignorecase      " in-case-sensitive dir/file completion
+"set wildignorecase      " in-case-sensitive dir/file completion
 
 set tags=./tags;/       " Search tag list from current dir up till root
 
